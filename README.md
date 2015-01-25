@@ -23,7 +23,9 @@ For each record it is provided:
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 
-The run_analysis.R script performs the following operations.
+The run_analysis.R script performs the following operations:
+======================================
+
 1. Reads in all .txt files from “test” and “train” folders
 2. Binds the two datasets by row
 3. Reads in column names from features.txt and assigns them to data
