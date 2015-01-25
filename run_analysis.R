@@ -29,5 +29,6 @@ all_data$Activity<-factor(all_data$Activity,labels=as.character(unlist(activity_
 which_columns<-grepl("mean\\(\\)|std\\(\\)|Subject|Activity",names(all_data))
 all_data<-all_data[,which_columns]
 
+##Group the data by subject and activity, then write to .txt file
 tidy_data <- all_data %>% group_by(Subject,Activity) %>% summarise_each(funs(mean))
 write.table(tidy_data, "./tidy_data.txt",sep="\t",row.names=FALSE)
